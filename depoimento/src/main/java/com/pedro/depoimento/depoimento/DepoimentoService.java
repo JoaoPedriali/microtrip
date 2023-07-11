@@ -14,7 +14,7 @@ public class DepoimentoService {
     private DepoimentoRepository depoimentoRepository;
     
     public Page<Depoimento> getDepoimentos(Pageable pageable) {
-        var depoimentos = depoimentoRepository.findAll(pageable);
+        var depoimentos = depoimentoRepository.findByDeletedFalse(pageable);
 
         return depoimentos;
     }
