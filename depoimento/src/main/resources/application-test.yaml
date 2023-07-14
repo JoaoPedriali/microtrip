@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: true
+  application:
+    name: depoimento
+
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version: 5.0.18
