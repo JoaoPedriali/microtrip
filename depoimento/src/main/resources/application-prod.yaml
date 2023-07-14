@@ -1,6 +1,15 @@
 spring:
   config:
-    import: configserver:http://localhost:9000
+    import: 'consul:'
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+        prefix: config
+        format: YAML
+        fail-fast: true
 server:
   port: 9001
 
